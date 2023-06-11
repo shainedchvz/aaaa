@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>About Page</title>
+</head>
+<body>
+   <div class="about">
+     <div class="about-1">
+        <h1>About Us</h1>
+        <P>Learn Korean with BTS is about learning the korean language in an easy and simple way it is not just for K-pop fans but also for everyone, it will help to make learning the korean language easier.</P>
+     </div>
+     <div class="tab-titles">
+        <p class="tab-links active-link" onclick="opentab('mission')">Mission</p>
+        <p class="tab-links" onclick="opentab('bts members')">BTS Members</p>
+     </div>
+     <div class="tab-contents active-tab" id="mission">
+        <ul>
+            <li><span>Learn! Korean with BTS</span><br> <br>Our mission is to share different languages such as Hangul or Korean language. <br>
+            We want to show new knowledge about language and spread it around the world. <br>
+            We also promote korean pop music or k-pop and also their traditions, <br> 
+            music, dances and etc. <br> <br>
+        thank you!♡</li>
+        </ul>
+     </div>
+     <div class="tab-contents" id="bts members">
+        <ul>
+            <li><span>Kim Namjoon</span><br>known professionally as RM, is a South Korean rapper, songwriter, and record producer. <br>
+            He is the leader of South Korean boy band BTS. RM released his first solo mixtape, RM, in 2015.</li>
+            <li><span>Kim Seokjin</span><br> also known professionally as Jin, is a South Korean singer, songwriter, and member of the <br>
+            South Korean boy band BTS. Kim has co-written and released three solo tracks with BTS: "Awake" in 2016, "Epiphany" in 2018, <br>
+            and "Moon" in 2020, all of which have charted on South Korea's Gaon Digital Chart.</li>
+            <li><span>Min Yoongi</span><br>known professionally by his stage names Suga and Agust D, is a South Korean rapper, songwriter and record producer. <br>
+            Under Big Hit Music, he debuted as a member of the South Korean boy band BTS in 2013.</li>
+            <li><span>Jung Hoseok</span><br>better known by his stage name J-Hope, is a South Korean rapper, singer-songwriter, dancer, and record producer. <br>
+            He made his debut as a member of South Korean boy band BTS in 2013, under Big Hit Entertainment. <br>
+            J-Hope released his first solo mixtape, Hope World, in 2018.</li>
+            <li><span>Park Jimin</span><br>known mononymously as Jimin, is a South Korean singer and dancer. In 2013, he made his debut as a member of the <br>
+            South Korean boy band BTS, under the record label Big Hit Entertainment. </li>
+            <li><span>Kim Taehyung</span><br>also known professionally as V, is a South Korean singer, songwriter, and member of the boy band BTS.</li>
+            <li><span>Jeon Jungkook</span><br>known mononymously as Jungkook, is a South Korean singer. He is a member and vocalist of the South Korean boy band BTS.</li>
+        </ul>
+     </div>
+   </div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+    </script>
+<footer class="text-center">
+    <p>&copy; HYBE.All Rights Reserved</p>
+   </footer>
+</body>
+</html>
